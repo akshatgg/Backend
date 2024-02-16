@@ -13,13 +13,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
 
-connectToDB()
 
+connectToDB()
 
 const router=require("./routes/userroutes.js")
 
 app.use('/',router)
-
-
 
 module.exports = app;
